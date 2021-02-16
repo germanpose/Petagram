@@ -20,59 +20,82 @@
             android:id="@+id/imgFoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/perrito1">
+            android:src="@drawable/perrito1"
+            android:clickable="true">
 
         </ImageView>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/imgBtnLike"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_bone_white"
-                android:background="@color/white"
-                android:layout_gravity="center">
+                android:orientation="horizontal"
+                >
 
-            </ImageButton>
+                <ImageButton
+                    android:id="@+id/imgBtnLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_bone_white"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_alignParentLeft="true">
 
-            <TextView
-                android:id="@+id/tvNombre"
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/nombre_mascota"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_marginVertical="5dp"
+                    android:layout_alignLeft="@+id/imgBtnLike">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:text="@string/nombre_mascota"
-                android:textSize="24dp"
-                android:textStyle="bold"
-                android:layout_marginVertical="5dp">
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true">
 
-            </TextView>
+                <TextView
+                    android:id="@+id/tv_cont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:paddingRight="20dp"
+                    >
 
-            <TextView
-                android:id="@+id/tv_cont"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="3"
-                android:textSize="24dp"
-                android:textStyle="bold"
-                android:layout_gravity="right|center"
-                android:paddingLeft="190dp"
-                android:layout_marginVertical="5dp">
+                </TextView>
 
-            </TextView>
+                <ImageView
+                    android:id="@+id/imgbonecolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_bone_color"
+                    android:layout_alignParentRight="true">
 
-            <ImageView
-                android:id="@+id/imgbonecolor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_bone_color">
+                </ImageView>
 
-            </ImageView>
+            </LinearLayout>
 
-        </LinearLayout>
+
+        </RelativeLayout>
 
 
     </LinearLayout>

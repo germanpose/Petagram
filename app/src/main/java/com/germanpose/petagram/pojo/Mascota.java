@@ -1,15 +1,20 @@
-package com.germanpose.petagram;
+package com.germanpose.petagram.pojo;
 
 public class Mascota {
 
     String nombre;
-    String likes;
+    private int likes;
     int foto;
+    int id;
 
-    public Mascota(String nombre, String likes, int foto) {
+    public Mascota(String nombre, int likes, int foto) {
         this.nombre = nombre;
         this.likes = likes;
         this.foto = foto;
+    }
+
+    public Mascota() {
+
     }
 
     public String getNombre() {
@@ -20,11 +25,11 @@ public class Mascota {
         this.nombre = nombre;
     }
 
-    public String getLikes() {
+    public int getLikes() {
         return likes;
     }
 
-    public void setLikes(String likes) {
+    public void setLikes(int likes) {
         this.likes = likes;
     }
 
@@ -34,5 +39,13 @@ public class Mascota {
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
